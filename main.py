@@ -1,5 +1,4 @@
 import pyaudio
-
 import pyttsx3
 import speech_recognition as sr
 import pywhatkit
@@ -7,15 +6,9 @@ import datetime
 import random
 import wikipedia
 
+
+
 listener=sr.Recognizer()
-try:
-    with sr.Microphone() as source:
-        print("prler maintent")
-        voix=listener.listen(source)
-        command=listener.recognize_google(voix)
-        print(command)
-except:
-    pass
 engine=pyttsx3.init()
 engine.setProperty("voice","french")
 engine.setProperty("rate",170)
@@ -70,6 +63,8 @@ def alexa_command():
             talk("oui")
         else:
             talk()
+
+    
 
 if __name__=="__main__":
     pass
